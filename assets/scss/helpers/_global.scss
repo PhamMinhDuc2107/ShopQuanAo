@@ -1,0 +1,47 @@
+* {
+   box-sizing: border-box;
+}
+a {
+   text-decoration: none;
+   color: $text-color;
+}
+img {
+   display: block;
+   max-width: 100%;
+}
+body {
+   font-family: $font-family;
+   line-height: 1;
+   font-size: 1.4rem;
+   color: $text-color;
+}
+.wrapper {
+   width: 100%;
+   margin: 0 auto;
+}
+.container {
+   max-width: 120rem;
+   margin: 0 auto;
+   padding: 0 1.5rem;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+   .container {
+      max-width: 99.2rem;
+   }
+}
+@media screen and (max-width: $breakpoint-lg) {
+   .container {
+      max-width: 72rem;
+   }
+}
+@media screen and (max-width: $breakpoint-md) {
+   .container {
+      max-width: 54rem;
+   }
+}
+@media screen and (max-width: $breakpoint-sm) {
+   .container {
+      max-width: 100%;
+   }
+}

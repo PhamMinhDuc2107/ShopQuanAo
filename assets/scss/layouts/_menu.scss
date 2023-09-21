@@ -1,0 +1,79 @@
+.menu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, 0.8);
+   z-index: 9999;
+   opacity: 0;
+   visibility: hidden;
+   transform: all linear 0.4s;
+   &__title {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      margin-left: -2rem;
+   }
+   &__list {
+      transition: all 0.3s linear;
+      transform: translateX(-100%);
+      width: 25rem;
+      height: 100%;
+      background-color: $white-color;
+      padding: 1.5rem;
+      padding-left: 3rem;
+      list-style: initial;
+      font-size: 1.6rem;
+   }
+   &__item {
+      line-height: 2.4rem;
+      width: 100%;
+      &--link {
+         width: 100%;
+         display: inline-block;
+         line-height: 2.4rem;
+         &:hover {
+            color: $gray-color;
+         }
+      }
+   }
+   &__icon--close {
+      position: absolute;
+      width: 3rem;
+      height: 3rem;
+      @include flex(center, center);
+      background-color: $black-color;
+      color: $white-color;
+      left: 25rem;
+      top: 2rem;
+      cursor: pointer;
+   }
+   &__circle {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      border: 1px solid $white-color;
+      @include flex(center, center);
+      pointer-events: none;
+   }
+}
+.menu2 {
+   list-style: circle;
+   padding-left: 1rem;
+   & a {
+      display: inline-block;
+      width: 100%;
+   }
+   & li a:hover {
+      color: $gray-color;
+   }
+}
+.active__menu {
+   opacity: 1;
+   visibility: visible;
+}
+.active__menu .menu__list {
+   transform: translateX(0);
+}
