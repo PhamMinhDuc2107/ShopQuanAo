@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,700&display=swap"
+         rel="stylesheet"
+      />
+      <!-- font awesome -->
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      />
+      <!-- css -->
+      <link rel="stylesheet" href="../assets/css/app.css" />
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="wrapper">
+            <div class="container">
+               <h3 class="main-logo-header main-logo">
+                  <img src="../assets/images/logo.webp" alt="">
+               </h3>
+              <form  class="form-order" method="post" >
+                <div class="main">
+                  <h3 class="main-logo">
+                     <img src="../assets/images/logo.webp" alt="">
+                  </h3>
+                  <div style=""  class="main-container">
+                    <div class="main-left">
+                      <div action="" class="main-form">
+                        <h4 class="main-form-title">Thông tin nhận hàng</h4>
+                        <div class="main-form-input">
+                          <input type="text" name="email" value=""class="form-input input-email" placeholder="Email">
+                        </div>
+                        <div class="main-form-input">
+                          <input type="text" name="name" value="" class="form-input input-name" placeholder="Họ và tên">
+                        </div>
+                        <div class="main-form-input">
+                          <input type="number" name="phone" class="form-input input-phone"  placeholder="Số điện thoại">
+                        </div>
+                        <div class="customer-select-box">
+                          <select name="city" id="city">
+                            <option value=""select>Thành Phố</option>
+                          </select>
+                        </div>
+                        <div class="customer-select-box">
+                          <select name="district" id="districts">
+                            <option value="" selected>Quận Huyện</option>
+                          </select>
+                        </div>
+                        <div class="customer-select-box">
+                          <select name="commune" id="commune">
+                            <option value="">Xã</option>
+                          </select>
+                        </div>
+                        <div class="main-form-input">
+                          <input type="text" class="form-input input-address" placeholder="Địa chỉ" name="address">
+                        </div>
+                        <div class="main-form-tarea">
+                          <textarea type="text" placeholder="Ghi chú..." class="input-note" name="note"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="main-right">
+                      <h4 class="main-form-title">Vận chuyển</h4>
+                      <div class="right-wrapper">
+                        <div class="input-group">
+                          <input type="radio" id="box">
+                          <label for="box">Giao hàng tận nơi</label>
+                        </div>
+                        <input type="text" disabled class="price-feeship" name="feeship" value="">
+                      </div>
+                      <h4 class="main-form-title">Thanh toán</h4>
+                      <div class="right-wrapper">
+                        <div class="input-group">
+                          <input type="radio" id="box1" name="paymentMethod" value="cash" class="input-ship" >
+                          <label for="box1">Thanh toán khi nhận hàng(COD)</label>
+                        </div>
+                        <i class="fa-solid fa-money-bill"></i>
+                      </div>
+                    </div>
+                    <div class="aside_btn checkout-lg">
+                        <a href="./cart.html" >
+                        <i class="fa fa-angle-left"></i>
+                        Quay về giỏ hàng
+                        </a>
+                        <button type="submit" class="aside_btn-submit">Đặt hàng</button>
+                     </div>
+                  </div>
+                </div>
+                <div class="aside">
+                  <h4 class="aside-form-title">Đơn hàng(8 sản phẩm)</h4>
+                  <div class="aside_content">
+                    <div class="aside_list">
+                        <div class="aside_item">
+                          <div class="aside_item-content">
+                            <div class="aside_item-img">
+                              <img src="../assets/images/áo thun bé 73.webp" alt="">
+                              <span>2</span>
+                            </div>
+                            <div class="aside_item-name">Combo 3 Quần Lót Boxer Nam Teelab Local Brand Trunk Bamboo Logo Basic CB001
+                              </div>
+                          </div>
+                          <div class="aside_item-price">180.000đ</div>
+                        </div>
+                    </div>
+                    <div class="aside_coupons">
+                      <div class="main-form-input">
+                        <input type="text" name="coupon" class="input-coupon" placeholder="Mã giảm giá" >
+                      </div>
+                      <input value="Áp dụng" class="coupons-btn">
+                    </div>
+                    <div class="coupon-alert">
+                      <span class="coupon-success"></span>
+                      <span class="coupon-errors"></span>
+                    </div>
+                    <div class="aside_price">
+                      <div class="aside_price-item">
+                        <span>Tạm tính</span>
+                        <span class="price">2.000.000đ</span>
+                      </div>
+                      <div class="aside_price-item">
+                        <span>Phí vận chuyển</span>
+                        <input disabled class="price-feeship price-fee" value="0đ">
+                      </div>
+                      <div class="aside_price-item">
+                        <span>Discount</span>
+                        <span class="aside_price-coupon">0đ</span>
+                      </div>
+                    </div>
+                    <div class="aside_price-total">
+                      <span>Tổng cộng</span>
+                      <p class="price-total">2.000.000đ</p>
+                    </div>
+                    <div class="aside_btn">
+                      <a href="./cart.html" >
+                        <i class="fa fa-angle-left"></i>
+                        Quay về giỏ hàng
+                      </a>
+                      <button type="submit" class="aside_btn-submit">Đặt hàng</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+          </div>
+      </div>
+   </body>
+   <script src="../assets/js/app.js"></script>
+</html>

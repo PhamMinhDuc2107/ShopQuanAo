@@ -11,3 +11,8 @@
    -webkit-line-clamp: $number;
    -webkit-box-orient: vertical;
 }
+@mixin hidden() {
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s linear;
+}

@@ -24,7 +24,13 @@ body {
    margin: 0 auto;
    padding: 0 1.5rem;
 }
-
+.title {
+   font-size: 4rem;
+   margin-bottom: 2rem;
+}
+.page {
+   margin-top: 3rem;
+}
 @media screen and (max-width: $breakpoint-xl) {
    .container {
       max-width: 99.2rem;
@@ -34,10 +40,19 @@ body {
    .container {
       max-width: 72rem;
    }
+   .page {
+      padding-top: 8rem;
+   }
 }
 @media screen and (max-width: $breakpoint-md) {
    .container {
       max-width: 54rem;
+   }
+   .title {
+      font-size: 3rem;
+   }
+   .page {
+      margin-top: unset;
    }
 }
 @media screen and (max-width: $breakpoint-sm) {
