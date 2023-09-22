@@ -1,0 +1,107 @@
+.page__product {
+   position: relative;
+   & .section__product {
+      margin-left: 0;
+   }
+   & .product__list {
+      flex-wrap: wrap;
+   }
+
+   & .cate {
+      position: absolute;
+      left: 0;
+      padding: 1.5rem 2.7rem;
+      &__title {
+         font-size: 2.4rem;
+         font-weight: bold;
+         @include flex(center, start);
+         gap: 1.5rem;
+         margin-bottom: 2rem;
+      }
+      &__list {
+         list-style: inherit;
+      }
+      &__item {
+         margin-left: 2rem;
+         padding-left: 1.6rem;
+         margin-bottom: 1.4rem;
+         &--link {
+            font-size: 1.6rem;
+            display: block;
+            transition: all 0.3s linear;
+            &:hover {
+               color: $gray-color;
+            }
+         }
+      }
+   }
+}
+.pagination {
+   @include flex(center, center);
+   gap: 1rem;
+   &__item {
+      @include flex(center, center);
+      width: 3.8rem;
+      transition: all 0.3s linear;
+      height: 3.8rem;
+      color: #d2d2d2;
+      border-radius: 50%;
+      border: 1px #d2d2d2 solid;
+      font-size: 1.4rem;
+      margin: 2rem 0 4rem;
+      &:hover {
+         background-color: $black-color;
+         color: $white-color;
+      }
+   }
+}
+@media screen and (max-width: 150rem) {
+   .page__product--container {
+      @include flex(start);
+   }
+   .page__product {
+      .cate {
+         width: 25%;
+         position: unset;
+         padding: 0 1rem;
+         margin-left: -1rem;
+      }
+   }
+}
+@media screen and (max-width: $breakpoint-lg) {
+   .page__product {
+      & .section__product {
+         padding-top: 10rem;
+         & .container {
+            margin: unset;
+            padding: unset;
+         }
+         & .product__title {
+            font-weight: bold;
+            font-size: 4rem;
+            line-height: 5.2rem;
+         }
+      }
+      .cate {
+         display: none;
+      }
+   }
+}
+@media screen and (max-width: $breakpoint-md) {
+   .page__product {
+      & .section__product {
+         padding-top: 8rem;
+         & .product__title {
+            font-weight: unset;
+            font-size: 3rem;
+            line-height: 4.2rem;
+         }
+      }
+   }
+   .pagination {
+      &__item {
+         width: 2.8rem;
+         height: 2.8rem;
+      }
+   }
+}

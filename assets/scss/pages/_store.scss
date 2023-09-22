@@ -1,0 +1,14 @@
+.store {
+   line-height: 2;
+   margin-bottom: 3rem;
+   & strong {
+      font-weight: bold;
+   }
+}
+@media screen and (max-width: $breakpoint-sm) {
+   .store {
+      & .store__content h4 {
+         margin-left: 1rem !important;
+      }
+   }
+}
